@@ -1,0 +1,180 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f8f1e4;
+    color: #333;
+}
+
+/* Header */
+.menu-header {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(90deg, #b32223, #8a1c1c);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    /* Ensure it's below the fixed navbar */
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding: 20px 30px;
+    background: linear-gradient(90deg, #b32223, hsl(43, 68%, 6%));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    /* Ensure same height */
+
+}
+
+.header2 .container {
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    /* Ensure height matches navbar */
+}
+
+.header2 h1 {
+    text-align: center;
+}
+
+.menu-header {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(90deg, #b32223, #8a1c1c);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Menu Container */
+.menu-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Section Title */
+.menu-section {
+    margin-bottom: 50px;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b32223;
+    position: relative;
+}
+
+.menu-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #b32223;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Menu Items Grid */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Menu Card */
+.menu-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Image */
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 4px solid #b32223;
+}
+
+/* Menu Info */
+.menu-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-info h3 {
+    font-size: 1.3rem;
+    color: #b32223;
+    margin-bottom: 8px;
+}
+
+.menu-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.menu-price {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2e7d32;
+    background: #ffeb3b;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-card:hover .menu-price {
+    background: #fbc02d;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-header {
+        font-size: 1.6rem;
+    }
+
+    .menu-section h2 {
+        font-size: 1.8rem;
+    }
+}
